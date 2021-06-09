@@ -1,6 +1,6 @@
 function pedirNombre(){
     let nombreIngresado   = prompt("Ingresar nombre");
-    alert("Hola " + nombreIngresado + " ! Bienvenido al carrito de compras");
+    alert("Hola " + nombreIngresado + " ! Bienvenido a nuestra tienda online");
     return nombreIngresado;
 } 
 pedirNombre();
