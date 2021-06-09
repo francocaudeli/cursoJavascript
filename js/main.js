@@ -1,25 +1,39 @@
-let captcha = "AbC"
-let verificacionCaptcha = prompt("Por favor, a continuación escriba el siguiente captcha: AbC")
+function pedirNombre(){
+    let nombreIngresado   = prompt("Ingresar nombre");
+    alert("Hola " + nombreIngresado + " ! Bienvenido al carrito de compras");
+    return nombreIngresado;
+} 
+pedirNombre();
 
+function calcularMontoTotal(){
+    let precioTotal = 0
+    let cantidadProductos = Number(prompt('Cuantos productos quiere llevar?'));
+    let i=1;
+    while (i<=cantidadProductos) {
+        let precioProducto = Number(prompt('Ingresa el precio del producto nº '+ i + ':')); 
+        precioTotal = precioTotal + precioProducto;
+        i++;
+    }
+    alert('Su total es de: $' + precioTotal);
 
-if (verificacionCaptcha === captcha) {
-    alert("Correcto. Usted no es un robot")
-    let edad = Number(prompt("Ingrese su edad, por favor"))
-    if (edad >=18) {
-        alert("Hola, usted puede entrar a este sitio")
-        if (edad < 70) {
-            alert("Además, usted puede comprar aquí bebidas energizantes")
-        }
-        else {
-            alert("PERO NO va a poder comprar bebidas energizantes")
-        }
-    } else {
-        alert("Lo siento, este sitio de venta de bebidas alcohólicas y energizantes es sólo para mayores de edad")
-    }    
-} else {
-    alert("Captcha incorrecto! GAME OVER")
+    const suma  = (a,b) => a + b;
+    const resta = (a,b) => a - b;
+    const iva   = x => x * 0.21;
+    let descuento; 
+    if (precioTotal >= 3000) {
+        descuento = 300;
+        alert('Su compra supera los $3000. Le corresponde un descuento de $300');
+    }
+    else if (precioTotal >= 1000) {
+        descuento = 100;
+        alert('Su compra supera los $1000. Le corresponde un descuento de $100');
+    }
+    else {
+        descuento = 0;
+    }  
+
+    let nuevoPrecio = resta(suma(precioTotal, iva(precioTotal)), descuento); 
+    alert('Su subtotal con IVA incluido es de: $' + nuevoPrecio);
 }
-
-
-
+calcularMontoTotal();
 
