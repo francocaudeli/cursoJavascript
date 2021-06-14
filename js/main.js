@@ -25,6 +25,8 @@ function calcularSubtotal(){
     console.log(subtotal) 
 }
 
+let carrito = []
+
 class Producto {
     constructor(id, titulo, precio, stock) {
         this.id = id
@@ -48,7 +50,7 @@ class Producto {
     }
 
     añadirAlCarrito = function (cantidad) {
-        cart.push(this.obtenerCompra(cantidad))
+        carrito.push(this.obtenerCompra(cantidad))
     }
 }
 
