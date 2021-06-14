@@ -1,4 +1,3 @@
-let total = 0
 let descuento = 0
 
 function informarDescuento(){ 
