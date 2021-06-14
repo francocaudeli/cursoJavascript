@@ -1,15 +1,15 @@
 function informarDescuento(obtenerTotal){ 
 
     if (obtenerTotal >= 1000) {
-        descuento = 100;
+        descuento = 100
         alert('Su compra supera los $1000. Le corresponde un descuento de $100');
     }
     else if (obtenerTotal >= 500) {
-        descuento = 50;
+        descuento = 50
         alert('Su compra supera los $500. Le corresponde un descuento de $50');
     }
     else {
-        descuento = 0;
+        descuento = 0
     }  return descuento
 }
 
