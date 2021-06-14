@@ -2,11 +2,11 @@ let descuento = 0
 
 function informarDescuento(){ 
 
-    if (total >= 1000) {
+    if (obtenerTotal >= 1000) {
         descuento = 100;
         alert('Su compra supera los $1000. Le corresponde un descuento de $100');
     }
-    else if (total >= 500) {
+    else if (obtenerTotal >= 500) {
         descuento = 50;
         alert('Su compra supera los $500. Le corresponde un descuento de $50');
     }
