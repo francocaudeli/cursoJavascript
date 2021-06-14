@@ -1,5 +1,3 @@
-let descuento = 0
-
 function informarDescuento(){ 
 
     if (obtenerTotal >= 1000) {
@@ -12,7 +10,7 @@ function informarDescuento(){
     }
     else {
         descuento = 0;
-    }  
+    }  return descuento
 }
 
 let carrito = []
