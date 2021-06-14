@@ -1,4 +1,4 @@
-function informarDescuento(){ 
+function informarDescuento(obtenerTotal){ 
 
     if (obtenerTotal >= 1000) {
         descuento = 100;
