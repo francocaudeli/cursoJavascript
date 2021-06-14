@@ -59,5 +59,5 @@ const producto8 = new Producto(8, 'molde bombones pascuas', 300, 50)
 
 let productos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8]
 
-for (const producto of productos)
-    producto.sumaIva();
+for (const productoConIVA of productos)
+    productoConIva.sumaIva();
