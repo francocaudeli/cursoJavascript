@@ -1,9 +1,5 @@
 let total = 0
-const suma  = (a,b) => a + b
-const resta = (a,b) => a - b
-const iva   = x => x * 0.21
 let descuento = 0
-let subtotal = 0
 
 function informarDescuento(){ 
 
@@ -20,19 +16,15 @@ function informarDescuento(){
     }  
 }
 
-function calcularSubtotal(){
-    let subtotal = resta(suma(total, iva(total)), descuento);
-    console.log(subtotal) 
-}
-
 let carrito = []
 
 class Producto {
-    constructor(id, titulo, precio, stock) {
+    constructor(id, titulo, precio) {
         this.id = id
         this.titulo = titulo
         this.precio = precio
     }
+    
     obtenerId = function () {
         return this.id
     }
@@ -52,6 +44,11 @@ class Producto {
     añadirAlCarrito = function (cantidad) {
         carrito.push(this.obtenerCompra(cantidad))
     }
+    
+    sumaIva() {
+        this.precio = this.precio * 1.21
+    }
+
 }
 
 const producto1 = new Producto(1, 'pico y manga', 100, 50)
@@ -64,3 +61,6 @@ const producto7 = new Producto(7, 'chocolate baño', 320, 50)
 const producto8 = new Producto(8, 'molde bombones pascuas', 300, 50)
 
 let productos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8]
+
+for (const producto of productos)
+    producto.sumaIva();
