@@ -1,7 +1,7 @@
 /* BODY */
 body {
   margin: 0%;
-  background-image: url(../Multimedia/background.jpg);
+  background-image: url(../img/background.jpg);
   background-repeat: repeat;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@ body {
 
 /* HEADER */
 .banner {
-  background-image: url(../Multimedia/banner.jpg);
+  background-image: url(../img/banner.jpg);
   background-size: 100% 100%;
   text-align: center;
   width: 100%;
