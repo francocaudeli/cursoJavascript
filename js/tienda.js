@@ -39,8 +39,9 @@ cargarCarrito()
 
 function cargarCarrito()
 {
-      const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
-
+const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
+    'shoppingCartItemTitle'
+  );
 
  for (let i=0;i<listaCarrito.length;i++){
   const shoppingCartRow = document.createElement('div');
