@@ -42,7 +42,7 @@ function cargarCarrito()
       const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
 
 
- for (let i=0;i<listaCarrito.length;i++)
+ for (let i=0;i<listaCarrito.length;i++){
   const shoppingCartRow = document.createElement('div');
   const shoppingCartContent = `
   <div class="row shoppingCartItem">
@@ -59,7 +59,17 @@ function cargarCarrito()
         </div>
         <div class="col-4">
             <div
-                class="shopping-cart-quantity d-flex justify-content-between align-it
+                class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
+                <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
+                    value="${listaCarrito[i].cantidad}">
+                <button class="btn btn-danger buttonDelete" type="button">X</button>
+            </div>
+        </div>
+    </div>`;
+  shoppingCartRow.innerHTML = shoppingCartContent;
+  shoppingCartItemsContainer.append(shoppingCartRow);
+      }
+  }
 
 
 
