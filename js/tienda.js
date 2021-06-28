@@ -23,6 +23,11 @@ function addToCartClicked(event) {
 
 let listaCarrito = []
 
+function actualizarListaCarrito(listaCarrito,nombre,cantidad) { 
+  for(let i=0;i<listaCarrito.length;i++){ 
+    if(listaCarrito[i].nombre==nombre){ listaCarrito[i].cantidad=cantidad}
+  }
+}
 
 function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
   const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
@@ -30,19 +35,21 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
   );
   for (let i = 0; i < elementsTitle.length; i++) {
     if (elementsTitle[i].innerText === itemTitle) {
-      listaCarrito.push({nombre:itemTitle,precio:itemPrice,cantidad:1})
-      localStorage.setItem('listaCarrito', JSON.stringify(listaCarrito));
       let elementQuantity = elementsTitle[
         i
       ].parentElement.parentElement.parentElement.querySelector(
         '.shoppingCartItemQuantity'
       );
       elementQuantity.value++;
+      actualizarListaCarrito(listaCarrito,itemTitle,elementQuantity.value)
+      localStorage.setItem('listaCarrito', JSON.stringify(listaCarrito));
+
       $('.toast').toast('show');
       updateShoppingCartTotal();
       return;
     }
   }
+  listaCarrito.push({nombre:itemTitle,precio:itemPrice,cantidad:1})
 
   const shoppingCartRow = document.createElement('div');
   const shoppingCartContent = `
