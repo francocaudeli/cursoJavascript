@@ -34,8 +34,34 @@ $(document).ready(function(){
  elementoGuardado = localStorage.getItem('listaCarrito');
 
 listaCarrito= JSON.parse(elementoGuardado)
-    
+cargarCarrito()
 })
+
+function cargarCarrito()
+{
+      const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
+
+
+ for (let i=0;i<listaCarrito.length;i++)
+  const shoppingCartRow = document.createElement('div');
+  const shoppingCartContent = `
+  <div class="row shoppingCartItem">
+        <div class="col-6">
+            <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                <img src=${itemImage} class="shopping-cart-image">
+                <h6 class="shopping-cart-item-title shoppingCartItemTitle text-truncate ml-3 mb-0">${listaCarrito[i].nombre}</h6>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                <p class="item-price mb-0 shoppingCartItemPrice">${listaCarrito[i].precio}</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <div
+                class="shopping-cart-quantity d-flex justify-content-between align-it
+
+
 
 function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
   const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
@@ -58,6 +84,8 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
     }
   }
   listaCarrito.push({nombre:itemTitle,precio:itemPrice,cantidad:1})
+  
+  
 
   const shoppingCartRow = document.createElement('div');
   const shoppingCartContent = `
