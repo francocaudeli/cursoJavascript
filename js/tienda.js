@@ -21,6 +21,9 @@ function addToCartClicked(event) {
   addItemToShoppingCart(itemTitle, itemPrice, itemImage);
 }
 
+let listaCarrito = []
+
+
 function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
   const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
     'shoppingCartItemTitle'
