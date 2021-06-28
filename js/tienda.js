@@ -29,6 +29,14 @@ function actualizarListaCarrito(listaCarrito,nombre,cantidad) {
   }
 }
 
+$(document).ready(function(){
+
+ elementoGuardado = localStorage.getItem('listaCarrito');
+
+listaCarrito= JSON.parse(elementoGuardado)
+    
+})
+
 function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
   const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
     'shoppingCartItemTitle'
