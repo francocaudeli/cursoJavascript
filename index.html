@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+
+    <title>Tienda Online - Cotillón Josefina</title>
+</head>
+
+<body>
+
+<!--Inicio Header-->
+    <div class="banner">
+                
+        <img class="banner__logo" src="img/logo.png" alt="logo de Cotillón Josefina">
+        
+        <h2 class="banner__eslogan">
+            Cotillón Josefina
+        </h2>
+    </div>
+    <header>
+    
+        <div class="container">
+            <div class="row align-items-stretch justify-content-between">
+                <nav class="navbar navbar-expand-md fixed-top">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-flex" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <img src="img/cart.jpeg" class="nav-link dropdown-toggle img-fluid" height="70px"
+                                    width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                                <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                    <table id="lista-carrito" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="btn btn-warning btn-block">Vaciar Carrito</a>
+                                    <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                                        Compra</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+<!--Fin Header-->
+
+<!--Inicio Main-->
+    <main>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+            <h1 class="display-4 mt-4">Bienvenid@ a nuestra tienda online!</h1>
+            <p class="lead font-weight-bold">Dale click al icono del carrito para proceder con tu compra</p>
+        </div>
+
+        <div class="container" id="lista-productos">
+            
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Combo Pico y Manga</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/imagenUno.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">100</span></h1>
+                        <a href="" class="btn btn-block btn-warning agregar-carrito" data-id="1">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Chocolate semi-amargo para moldear</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/imagenDos.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">200</span></h1>
+                        <a href="" class="btn btn-block btn-warning agregar-carrito" data-id="2">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Molde para huevo de Pascuas</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/imagenTres.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">150</span></h1>
+                        <a href="" class="btn btn-block btn-warning agregar-carrito" data-id="3">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Chocolate con leche para moldear</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/imagenCuatro.jpeg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">175</span></h1>
+                        <a href="" class="btn btn-block btn-warning agregar-carrito" data-id="4">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Molde para donnuts</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/imagenCinco.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">50</span></h1>
+                        <a href="" class="btn btn-block btn-warning agregar-carrito" data-id="5">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Molde para bombones</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/imagenSeis.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">60</span></h1>
+                        <a href="" class="btn btn-block btn-warning agregar-carrito" data-id="6">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <!--Fin Main-->
+
+    <!--Inicio Footer-->
+    <footer class="pie">
+        <p class="pie__texto">Claudio de Alas 2175
+        <br> Lomas de Zamora
+        </p>
+    </footer>
+    <!--Fin Footer-->
+
+    <!--SCRIPTS-->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+    <!--SCRIPTS-->
+
+</body>
+
+</html>
