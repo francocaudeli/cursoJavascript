@@ -35,6 +35,34 @@ function procesarCompra() {
         }).then(function () {
             window.location = "index.html";
         })
+    }else if (cliente.value === '' || correo.value === '') {
+        Swal.fire({
+            type: 'error',
+            title: 'Oops...',
+            text: 'Ingrese todos los campos requeridos',
+            showConfirmButton: false,
+            timer: 2000
+        })
+    }
+    else {
+        const cargandoGif = document.querySelector('#cargando');
+        cargandoGif.style.display = 'block';
+        enviado.src = 'img/mail.gif';
+        enviado.style.display = 'block';    
+        enviado.width = '150';
+        
+        const enviado = document.createElement('img');
+            
+        setTimeout(() => {
+            cargandoGif.style.display = 'none';
+            document.querySelector('#loaders').appendChild(enviado);
+            setTimeout(() => {
+            enviado.remove();    
+            compra.vaciarLocalStorage();
+            window.location = "index.html";
+            }, 2000);   
+        }, 3000);                
+
     }
     
     
