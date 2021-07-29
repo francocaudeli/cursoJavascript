@@ -8,10 +8,15 @@ const correo = document.getElementById('correo');
 
 
 $( "#procesar-compra" ).click(function() {
- 
+  let listcarrito=compra.obtenerProductosLocalStorage()
+  let pedido="No hay productos";
+  
+  
+  
+  
   let data={
       destinatario:'Franco',
-      pedido: 'prueba de mensaje pedido'
+      pedido: pedido
    };
   emailjs.init("user_SSKGZr6BrmtKNprpM75gM");
   emailjs.send("service_72pla7h","template_g964f9v", data)
