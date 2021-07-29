@@ -64,7 +64,9 @@ function procesarCompra() {
         }, 3000);                
 
     }
-    
+    $( "#procesar-compra" ).click(function() {
+  alert( "Hola mundo" );
+});
     
 }
 
