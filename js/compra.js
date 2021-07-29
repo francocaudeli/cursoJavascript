@@ -9,6 +9,22 @@ const correo = document.getElementById('correo');
 
 $( "#procesar-compra" ).click(function() {
   alert( "Hola mundo" );
+  let data={
+      destinatario:'Franco',
+      pedido: 'prueba de mensaje pedido'
+   };
+  emailjs.init("user_SSKGZr6BrmtKNprpM75gM");
+  emailjs.send("service_72pla7h","template_g964f9v", data)
+                        .then(function(response) {
+                            if(response.text === 'OK'){
+                                alert('El correo se ha enviado de forma exitosa');
+                            }
+                           console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                        }, function(err) {
+                            alert('Ocurrió un problema al enviar el correo');
+                           console.log("FAILED. error=", err);
+                        });
+
 });
 
 cargarEventos();
