@@ -34,19 +34,16 @@ function procesarCompra() {
         Swal.fire({
             type: 'error',
             title: 'Oops...',
-            text: 'No hay productos, selecciona alguno',
-            showConfirmButton: false,
-            timer: 2000
-        }).then(function () {
+            text: 'No hay productos, selecciona alguno'
+         }).then(function () {
             window.location = "index.html";
         })
     }else if (cliente.value === '' || correo.value === '') {
         Swal.fire({
             type: 'error',
             title: 'Oops...',
-            text: 'Ingrese todos los campos requeridos',
-            showConfirmButton: false
-         })
+            text: 'Ingrese todos los campos requeridos'
+          })
     }
     else {
         const cargandoGif = document.querySelector('#cargando');
