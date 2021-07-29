@@ -11,7 +11,8 @@ $( "#procesar-compra" ).click(function() {
   let listcarrito=compra.obtenerProductosLocalStorage()
   let pedido="No hay productos";
   
-  
+  for(let i=0; i<listcarrito.length;i++)
+{pedido=pedido+"  Nombre:"+listcarrito[i].titulo + ' Cantidad:'+listcarrito[i].cantidad }
   
   
   let data={
