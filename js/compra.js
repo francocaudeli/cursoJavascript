@@ -8,7 +8,7 @@ const correo = document.getElementById('correo');
 
 
 $( "#procesar-compra" ).click(function() {
-  alert( "Hola mundo" );
+ 
   let data={
       destinatario:'Franco',
       pedido: 'prueba de mensaje pedido'
