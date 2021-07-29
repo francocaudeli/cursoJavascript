@@ -4,7 +4,12 @@ const carrito = document.getElementById('carrito');
 const procesarCompraBtn = document.getElementById('procesar-compra');
 const cliente = document.getElementById('cliente');
 const correo = document.getElementById('correo');
+  
 
+
+$( "#procesar-compra" ).click(function() {
+  alert( "Hola mundo" );
+});
 
 cargarEventos();
 
@@ -64,9 +69,7 @@ function procesarCompra() {
         }, 3000);                
 
     }
-    $( "#procesar-compra" ).click(function() {
-  alert( "Hola mundo" );
-});
+ 
     
 }
 
