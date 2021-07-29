@@ -45,9 +45,8 @@ function procesarCompra() {
             type: 'error',
             title: 'Oops...',
             text: 'Ingrese todos los campos requeridos',
-            showConfirmButton: false,
-            timer: 2000
-        })
+            showConfirmButton: false
+         })
     }
     else {
         const cargandoGif = document.querySelector('#cargando');
